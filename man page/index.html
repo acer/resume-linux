@@ -4,63 +4,120 @@
   <title>acerwang(7) - Linux manual page</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <style type="text/css">
-    .topheader {}
-    .h2category {}
-    .subtext {}
+    body {
+    	font-family: monospace;
+    	width: 600px;
+    }
+
+    .pcategory {
+    	font-weight: bolder;
+    }
+
+    .subcategory {
+    	font-weight: bold;
+    	margin: 20px 0px 0px 10px;
+    }
+
+    .subcategory span{
+        font-weight: normal;
+    }
+
+    .subtext {
+    	margin-left: 20px;
+    }
+
+    .subsubtext {
+    	margin-left: 30px;
+
+    }
   </style>
 </head>
 
 <body>
-<pre class="topheader"><span>ACERWANG(7) Linux's User Manual ACERWANG(7)</span></pre> 
+<pre class="topheader">ACERWANG(7)                       Linux's User Manual                       ACERWANG(7)
+</pre> 
 
-<h2 class="h2category">NAME</h2>
+<p class="pcategory">NAME</p>
 <p class="subtext">Acer Wang - Electrical Engineering Student | Nom Nom Expert</p>
 
-<h2 class="h2category">SYNOPSIS</h2>
-<p class="subtext">acerwang  [<b>-c</b>]  [<b>-e</b> [<u>school</u>][,...]]  [<b>-o</b>]  [<b>-p</b> <u>[project</u>][,...]]  [<b>-s</b>]  [<b>-v</b>]  [<b>-w</b>]</p><br>acerwang <b>-a</b><br>acerwang <b>-g</b>
 
-<h2 class="h2category">SUMMARY</h2>
-<p class="subtext">I'm an Electrical Engineering Student from the University of Waterloo in Ontario, Canada. Although I call myself "the hardware guy" among my group of friends, I have quite the passion for Linux.  I also have quite the passion for food, which is my dream to become the Nom Nom Expert (or am I already? Hmm...). 
+<p class="pcategory">SYNOPSIS</p>
+<p class="subtext">
+	acerwang  [<b>-c</b>]  [<b>-e</b> [<u>school</u>][,...]]  [<b>-o</b>]  [<b>-p</b> <u>[project</u>][,...]]  [<b>-s</b>]  [<b>-v</b>]  [<b>-w</b>]<br>acerwang <b>-a</b><br>acerwang <b>-g</b>
 </p>
-<p class="subtext">This program is my resume, and also my pratice on writing linux command line programs. All in all, this is a weekend project to improve my skillset and feed my narcissism.</p>
 
-<h2 class="h2category">DESCRIPTION</h2>
+
+<p class="pcategory">SUMMARY</p>
+<p class="subtext">
+	I'm an Electrical Engineering Student from the University of Waterloo in Ontario, Canada. Although I call myself "the hardware guy" among my group of friends, I have quite the passion for Linux.  I also have quite the passion for food, which is my dream to become the Nom Nom Expert (or am I already? Hmm...). 
+</p>
+<p class="subtext">
+	This program is my resume, and also my pratice on writing linux command line programs. All in all, this is a weekend project to improve my skillset and feed my narcissism.
+</p>
+
+
+<p class="pcategory">DESCRIPTION</p>
 <p class="subcategory">-a, --all</p>
-<p class="subtext">Setting this option will display everything that this program has to offer. The program will return an error if other options are set.</p>
+<p class="subtext">
+	Setting this option will display everything that this program has to offer.<br>The program will return an error if other options are set.
+</p>
+
 
 <p class="subcategory">-c, --contact</p>
-<p class="subtext">This option returns my contact information.</p>
+<p class="subtext">
+	This option returns my contact information.
+</p>
 
-<p class="subcategory">-e, --education [<u>school</u>][,...]</p>
-<p class="subtext">Returns my post-secondary education history. Arguments you can pass: waterloo, toronto, taipei. If no arguments are passed, then all education history will be displayed.</p>
+
+<p class="subcategory">-e, --education <span>[<u>school</u>][,...]</span></p>
+<p class="subtext">
+	Returns my post-secondary education history.<br>Arguments you can pass:</p> 
+<p class="subsubtext">waterloo, toronto, taipei</p>
+<p class="subtext">
+If no arguments are passed, then all education history will be displayed.
+</p>
+
 
 <p class="subcategory">-g, --getpdf</p>
 <p class="subtext">Returns a url string of my resume in PDF format. The program will return an error if other options are set.</p>
 
+
 <p class="subcategory">-h, --help</p>
 <p class="subtext">Displays a short help page to get you started.</p>
+
 
 <p class="subcategory">-m, --me</p>
 <p class="subtext">You can see what I look like, in an ASCII art!</p>
 
+
 <p class="subcategory">-o, --other</p>
 <p class="subtext">A bit more things I like to share with you about me.</p>
 
-<p class="subcategory">-p, --projects [<u>project</u>][,...]</p>
-<p class="subtext">My mentionable projects. Arguments you can pass: printer, uwchat, blimp, pinball, psp. If no arguments are passed, then all projects will be displayed.</p>
+
+<p class="subcategory">-p, --projects <span>[<u>project</u>][,...]</span></p>
+<p class="subtext">List of my mentionable projects.<br>Arguments you can pass:</p> 
+<p class="subsubtext">printer, uwchat, blimp, pinball, psp</p>
+<p class="subtext">If no arguments are passed, then all projects will be displayed.</p>
+
 
 <p class="subcategory">-s, --skill<p>
 <p class="subtext">Setting this option returns a summary of my skillset.</p>
 
+
 <p class="subcategory">-v, --volunteer</p>
 <p class="subtext">Returns my volunteer experiences.</p>
 
-<p class="subcategory">-w, --work [<u>work</u>][,...]</p>
+
+<p class="subcategory">-w, --work <span>[<u>work</u>][,...]</span></p>
 <p class="subtext">Returns my work experiences. Arguments you can pass: communitech, irdeto. If no arguments are passed, then all work experience will be displayed.</p>
 
-<h2 class="h2category">AUTHOR</h2>
+
+
+<p class="pcategory">AUTHOR</p>
 <p class="subtext">Shamelessly written by Acer Chi Wang, Copyright 2015. For more information, visit <a href="http://www.acer.io">http://www.acer.io</a>.</p>
 
-<h2 class="h2category">OTHER</h2>
+
+
+<p class="pcategory">OTHER</p>
 <p class="subtext">Download the program at <a href="https://github.com/acerism/resume-linux">https://github.com/acerism/resume-linux</a>.</p>
 </body>
