@@ -1,0 +1,9 @@
+-a --all         //tell me all about you
+-s --skill       //skill set summary
+-w --work        //work experience
+-p --project     //projects
+-e --education   //education
+-o --other       //other experiences
+-v --volunteer   //volunteer experience
+-c --contact     //contact information
+-m --me          //ascii art self portrait
