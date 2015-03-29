@@ -121,7 +121,15 @@ void print_getpdf(){
 }
 
 void print_help(){
-
+	printf("-a\t--all\t//tell me all about you\n
+			-s\t--skill\t//skill set summary\n
+	        -w\t--work\t//work experience\n
+	        -p\t--project\t//projects\n
+	        -e\t--education\t//education\n
+	        -o\t--other\t//other experiences\n
+	        -v\t--volunteer\t//volunteer experience\n
+	        -c\t--contact\t//contact information\n
+	        -m\t--me\t//ascii art self \n");
 }
 
 void print_asciiart(){
