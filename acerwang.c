@@ -42,7 +42,7 @@ int main (int argc, char *argv[])
 			{0,           0,                 0,      0}
 		}; //end long_options
 
-		while(opt = getopt_long(argc, argv, "ace::ghop::svw::", longopt, &long_index) != -1)
+		while((opt = getopt_long(argc, argv, "ace::ghop::svw::", longopt, &long_index)) != -1)
 		{
 			printf("opt=%d, optind = %d, opterr=%d, optopt=%d\n", opt, optind, opterr, optopt);
 			switch (opt) {
@@ -121,15 +121,7 @@ void print_getpdf(){
 }
 
 void print_help(){
-	printf("-a\t--all\t//tell me all about you\n
-			-s\t--skill\t//skill set summary\n
-	        -w\t--work\t//work experience\n
-	        -p\t--project\t//projects\n
-	        -e\t--education\t//education\n
-	        -o\t--other\t//other experiences\n
-	        -v\t--volunteer\t//volunteer experience\n
-	        -c\t--contact\t//contact information\n
-	        -m\t--me\t//ascii art self \n");
+	printf("-a\t--all\t//tell me all about you\n-s\t--skill\t//skill set summary\n-w\t--work\t//work experience\n-p\t--project\t//projects\n-e\t--education\t//education\n-o\t--other\t//other experiences\n-v\t--volunteer\t//volunteer experience\n-c\t--contact\t//contact information\n-m\t--me\t//ascii art self \n");
 }
 
 void print_asciiart(){
