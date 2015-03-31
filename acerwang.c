@@ -37,12 +37,11 @@ int main (int argc, char *argv[])
 			{"other",     no_argument,       NULL, 'o'},
 			{"projects",  optional_argument, NULL, 'p'},
 			{"skill",     no_argument,       NULL, 's'},
-			{"volunteer", no_argument,       NULL, 'v'},
 			{"work",      optional_argument, NULL, 'w'},
 			{0,           0,                 0,      0}
 		}; //end long_options
 
-		while((opt = getopt_long(argc, argv, ":ace::ghmop::svw::", longopt, &long_index)) != -1)
+		while((opt = getopt_long(argc, argv, ":ace::ghmop::sw::", longopt, &long_index)) != -1)
 		{
 			//printf("opt=%d, optind = %d, opterr=%d, optopt=%d\n", opt, optind, opterr, optopt);
 			switch (opt) {
@@ -82,10 +81,6 @@ int main (int argc, char *argv[])
 					print_skill();
 					break;
 
-				case 'v':
-					print_volun();
-					break;
-
 				case 'w':
 					print_work(argv[optind]);
 					break;
@@ -105,12 +100,11 @@ int main (int argc, char *argv[])
 }//main 
 
 void print_all(){
-	char  *all = ":";
+	char *all = ":";
 	print_skill();
 	print_edu(all);
 	print_work(all);
 	print_projects(all);
-	print_volun();
 	print_other();
 	print_asciiart();
 	print_contact();
@@ -130,7 +124,7 @@ void print_getpdf(){
 }
 
 void print_help(){
-	printf("-a\t--all\t\t//tell me all about you\n-s\t--skill\t\t//skill set summary\n-w\t--work\t\t//work experience\n-p\t--project\t//projects\n-e\t--education\t//education\n-o\t--other\t\t//other experiences\n-v\t--volunteer\t//volunteer experience\n-c\t--contact\t//contact information\n-m\t--me\t\t//ascii art self\n");
+	printf("-a\t--all\t\t//tell me all about you\n-s\t--skill\t\t//skill set summary\n-w\t--work\t\t//work experience\n-p\t--project\t//projects\n-e\t--education\t//education\n-o\t--other\t\t//other experiences\n-c\t--contact\t//contact information\n-m\t--me\t\t//ascii self-portrait\n");
 }
 
 void print_asciiart(){
@@ -190,11 +184,10 @@ void print_projects(char * option){
 }
 
 void print_skill(){
-
-}
-
-void print_volun(){
-
+	printf("\nHardware:\n  Cyclone V FPGA, ARM SoC, Raspberry Pi, Oscilloscopes, Logic Analyzers\n\n");
+	printf("Programming:\n  C, C++, Python, Assembly, VHDL, JavaScript, HTML, CSS, Java, Matlab\n\n");
+	printf("Software/Framwork:\n  Altera Quartus II, IDAPro, GDB, Binwalk, Volatility, SELinux, Nodejs, MongoDB, Dojo, PhoneGap\n\n");
+	printf("Operating Systems:\n  Linux (Ubuntu, Debian, Raspbian), Windows, OSX\n");
 }
 
 void print_work(char * option){
