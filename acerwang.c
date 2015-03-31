@@ -42,9 +42,9 @@ int main (int argc, char *argv[])
 			{0,           0,                 0,      0}
 		}; //end long_options
 
-		while((opt = getopt_long(argc, argv, "ace::ghop::svw::", longopt, &long_index)) != -1)
+		while((opt = getopt_long(argc, argv, ":ace::ghmop::svw::", longopt, &long_index)) != -1)
 		{
-			printf("opt=%d, optind = %d, opterr=%d, optopt=%d\n", opt, optind, opterr, optopt);
+			//printf("opt=%d, optind = %d, opterr=%d, optopt=%d\n", opt, optind, opterr, optopt);
 			switch (opt) {
 				case 'a':
 					print_all();
@@ -55,7 +55,7 @@ int main (int argc, char *argv[])
 					break;
 
 				case 'e':
-					print_edu(optarg);
+					print_edu(argv[optind]);
 					break;
 
 				case 'g':
@@ -75,7 +75,7 @@ int main (int argc, char *argv[])
 					break;
 
 				case 'p':
-					print_projects(optarg);
+					print_projects(argv[optind]);
 					break;
 
 				case 's':
@@ -87,11 +87,11 @@ int main (int argc, char *argv[])
 					break;
 
 				case 'w':
-					print_work(optarg);
+					print_work(argv[optind]);
 					break;
 
 				case '?':
-					fprintf(stderr, "-%c is not a valid option.\n", opt);
+					fprintf(stderr, "-%c is not a valid option.\n", optopt);
 
 			}//end switch
 
@@ -105,11 +105,19 @@ int main (int argc, char *argv[])
 }//main 
 
 void print_all(){
-
+	char  *all = ":";
+	print_skill();
+	print_edu(all);
+	print_work(all);
+	print_projects(all);
+	print_volun();
+	print_other();
+	print_asciiart();
+	print_contact();
 }
 
 void print_contact(){
-
+	printf("Acer Chi Wang\nUW Engineering Student\nEmail: me at acer dot io\nVisit me at http://www.acer.io\n");
 }
 
 void print_edu(char * option){
@@ -117,19 +125,64 @@ void print_edu(char * option){
 }
 
 void print_getpdf(){
+	printf("http://www.acer.io/documents/AcerChiWang_Resume.pdf\n");
 
 }
 
 void print_help(){
-	printf("-a\t--all\t//tell me all about you\n-s\t--skill\t//skill set summary\n-w\t--work\t//work experience\n-p\t--project\t//projects\n-e\t--education\t//education\n-o\t--other\t//other experiences\n-v\t--volunteer\t//volunteer experience\n-c\t--contact\t//contact information\n-m\t--me\t//ascii art self \n");
+	printf("-a\t--all\t\t//tell me all about you\n-s\t--skill\t\t//skill set summary\n-w\t--work\t\t//work experience\n-p\t--project\t//projects\n-e\t--education\t//education\n-o\t--other\t\t//other experiences\n-v\t--volunteer\t//volunteer experience\n-c\t--contact\t//contact information\n-m\t--me\t\t//ascii art self\n");
 }
 
 void print_asciiart(){
 
+	printf("                .;'';;;,.`                 \n");
+	printf("              ,+'''+''+++'',               \n");
+	printf("            `'++++'''+##+++''.             \n");
+	printf("           `++++++++++'''++#++:            \n");
+	printf("           ++++++++++++++++++++:           \n");
+	printf("          ;++++++++++++''+++++#+.          \n");
+	printf("         .++++++++++++'++++++++++          \n");
+	printf("         '++++++++++#+##+++++++++:         \n");
+	printf("        .+++++#++++;''''++++++++++         \n");
+	printf("        ;++++#+++',,,;''''+++++++#,        \n");
+	printf("        +#++#+++;,,,,,,'''''+++++#'        \n");
+	printf("        +++++++;::,,,,,::'++++++#++        \n");
+	printf("        ++++++:::,,,,,,,:::+++++++#`       \n");
+	printf("        +++++:::,,:,,,,,,,::;++++##`       \n");
+	printf("        ++#+:;;:,,,,,,,,:;;';'+#+#+.       \n");
+	printf("        +++''+++;,,....,;'''+;+#+##.       \n");
+	printf("        +#+'+;;''':,,,,;;;::;';+#+#.       \n");
+	printf("        ;+#;;:::;;;::,:;;::::;;+#+#`       \n");
+	printf("        .+#+++'''+';::;+';:;'+###+#        \n");
+	printf("        `+#+;;';;';+##';'''';;;##++        \n");
+	printf("         ##+;+'++';++++;'++'+;;'#+,        \n");
+	printf("         +';;';;;;:+,,+:;::;';''++         \n");
+	printf("         ;;';;;;;::+,,+:::;::;+'+:         \n");
+	printf("         `'':::::,':,,:',,,,:,''+`         \n");
+	printf("          ';'';::+;,,,:;+';;+';;+          \n");
+	printf("          ;::,,,:;,,,,:,;:,,,,:;'          \n");
+	printf("          :::,,:;;;;:;;;;;:,,::;:          \n");
+	printf("          ,;::::;;++''++;:;:::;;,          \n");
+	printf("          .;;::;;:::;;::::;::;;;.          \n");
+	printf("          `;;::;;::::::::;;:;;;'`          \n");
+	printf("           ;;::;'#''';''#':,:;;'           \n");
+	printf("           :;;:::;':,,;;:::,:;;,           \n");
+	printf("            ';::::::,,,:::,:;;'            \n");
+	printf("            ,';:,:;::::::::;'';            \n");
+	printf("             ;';::;;;;;;::;;'+,            \n");
+	printf("             `'';,,,,,,,,;'''+             \n");
+	printf("              ;'';,,,.,,;'''+;             \n");
+	printf("              .''+'::::;+''++`             \n");
+	printf("               .++++++++++++`              \n");
+	printf("                `'++++++++;`               \n");
+	printf("                  .'++++;`                 \n");
+	printf("                     ``                    \n");
+
+
 }
 
 void print_other(){
-
+	printf("And why would I tell you more? Visit my blog.\n");
 }
 
 void print_projects(char * option){
